@@ -1,0 +1,51 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+*.log
+
+# IntelliJ
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# React
+build/
+dist/
+
+# Environment
+.env
+.env.local
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Java
+*.class
+
+# Spring Boot
+*.jar
+*.war
+
+# Database
+*.db
+
+# Coverage
+coverage/
+
+# Mac
+.AppleDouble
+.LSOverride
