@@ -1,116 +1,124 @@
 # 🚀 DecisionHub
 
-> A Collaborative Decision-Making & Community Polling Platform built using Java Spring Boot, React.js, and PostgreSQL.
+> A modern, premium Collaborative Decision-Making & Community Polling Platform built using **Java Spring Boot**, **React.js**, and **PostgreSQL/H2**.
+
+---
+
+## 📸 Preview
+
+Here is a preview of the main Analytics Dashboard in DecisionHub:
+
+![DecisionHub Dashboard](docs/assets/dashboard.png)
+
+---
 
 ## 📌 Overview
 
-DecisionHub is a full-stack web application that helps individuals and communities make informed decisions through collaborative voting, discussions, option comparisons, and analytics.
+**DecisionHub** is a full-stack web application designed to help individuals, teams, and communities make consensus-based decisions through structured option comparison tables, discussions, polls, and interactive dashboards.
 
-Users can create decision boards, invite others to vote, compare options, analyze pros and cons, and view insightful dashboards before making a final decision.
+Users can:
+*   Create and manage custom **Decision Boards**.
+*   Map and compare options using multi-factor rating scales with custom weights.
+*   Discuss the options in threaded **Community Discussions**.
+*   Analyze pros/cons and cast votes in interactive **Community Polls**.
 
 ---
 
 ## ✨ Features
 
-- 🔐 JWT Authentication
-- 🔑 Google OAuth Login
-- 👤 User Profile Management
-- 📋 Decision Board Management
-- 📊 Option Comparison
-- 🗳 Voting & Polling
-- 💬 Community Discussions
-- 📈 Analytics Dashboard
-- 🔔 Notifications
-- 👥 Community Management
-- 📄 PDF & Excel Report Export
+*   🔐 **JWT-based Authentication** with support for both username and email credentials.
+*   📊 **Analytics Dashboard** featuring dynamic Chart.js visualizations (Activity Trends, Category distributions).
+*   ⚖️ **Option Comparison Table** to calculate scores dynamically based on user-defined factors.
+*   💬 **Threaded Comments** allowing structured discussions and replies on decision cards.
+*   🗳️ **Community Polls** supporting custom types (single-choice, multi-choice, anonymous voting).
+*   🔔 **Real-time Notifications** to notify users of comments, updates, and newly cast votes.
+*   👥 **Community Management** to invite users and collaborate in private/public spaces.
+*   📄 **PDF & Excel Reports** for decision documentation.
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
 ### Frontend
-- React.js
-- JavaScript
-- Tailwind CSS
-- Axios
-- React Router
-- Chart.js
+*   **Vite + React.js (ES6+)**
+*   **Tailwind CSS** for premium, modern styling.
+*   **Axios** for stateful API calls.
+*   **Chart.js + React-Chartjs-2** for interactive graphs.
+*   **React Router Dom** for client-side routing.
 
 ### Backend
-- Java
-- Spring Boot
-- Spring Security
-- Spring Data JPA
-- Hibernate
+*   **Java 17 & Spring Boot 3**
+*   **Spring Security** + Stateless **JWT Authentication**.
+*   **Spring Data JPA** with Hibernate ORM.
+*   **H2 Database** (configured for development/in-memory test execution) & PostgreSQL support.
 
-### Database
-- PostgreSQL
-- MySQL
+---
 
-### Authentication
-- JWT
-- OAuth2 (Google Login)
+## 🚀 Getting Started
 
-### Deployment
-- Docker
-- GitHub Actions
-- AWS / Render
+### Prerequisites
+*   **Java JDK 17** installed.
+*   **Node.js** (v18+) and **npm** installed.
+
+---
+
+### Step-by-Step Execution
+
+#### 1. Start the Backend
+Open a terminal in the `backend` directory. Run the server using the configured Maven Wrapper (`mvnw.cmd` on Windows, `./mvnw` on Unix):
+
+**On Windows:**
+```powershell
+$env:JAVA_HOME = "C:\Program Files\Java\jdk-17"
+.\mvnw.cmd spring-boot:run
+```
+
+**On Linux / macOS:**
+```bash
+./mvnw spring-boot:run
+```
+
+*The backend runs on **http://localhost:8080**. It will automatically bootstrap a default database with an admin account.*
+
+*   **Default Admin Email:** `admin@decisionhub.com`
+*   **Default Admin Password:** `admin123`
+
+---
+
+#### 2. Start the Frontend
+Open a new terminal in the `frontend` directory:
+
+```bash
+npm install
+npm run dev
+```
+
+*The development server will start on **http://localhost:5173**. Access this address in your browser to sign in.*
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 DecisionHub
 │
-├── backend
-│   ├── src
-│   ├── controller
-│   ├── service
-│   ├── repository
-│   ├── entity
-│   └── security
+├── backend                  # Spring Boot App
+│   ├── .mvn/wrapper         # Local Maven Wrapper configurations
+│   ├── src/main/java        # Controllers, Services, Entities, Repositories, Security config
+│   └── src/main/resources   # App properties & database configuration
 │
-├── frontend
-│   ├── src
-│   ├── components
-│   ├── pages
-│   ├── hooks
-│   ├── services
-│   └── assets
+├── frontend                 # React App
+│   ├── src/components       # Reusable components (Charts, Modals, Widgets)
+│   ├── src/context          # Auth & API Contexts
+│   ├── src/pages            # Routed views (Dashboard, Decisions, Profile, Reports)
+│   └── src/services         # Axios API connection services
 │
-└── docs
+└── docs                     # Architecture blueprints and assets
 ```
 
 ---
 
-## 📌 Core Modules
+## 👨•💻 Author
 
-- User Authentication
-- User Profile
-- Decision Boards
-- Voting & Polling
-- Option Comparison
-- Discussions
-- Analytics
-- Notifications
-- Communities
-- Reports
-
----
-
-## 🎯 Future Enhancements
-
-- AI Decision Recommendation
-- Sentiment Analysis
-- Real-Time Chat
-- WebSocket Live Voting
-- Mobile App
-
----
-
-## 👨‍💻 Author
-
-**Karthik T S**
-
-Final Year Computer Science Engineering Student
+**Karthik T S**  
+*Final Year Computer Science Engineering Student*
